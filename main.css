@@ -1,0 +1,1676 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+.navbar {
+  background-image: url(./images/landing.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  height: 55vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 3vw;
+}
+.header .navbar__logo {
+  padding-left: 5vw;
+}
+
+@media (max-width: 768px) {
+  .menu__body {
+    position: absolute;
+    height: 55vw;
+    width: 50vw;
+    top: 0vw;
+    background-color: #25252C;
+    display: none;
+  }
+}
+.menu__body.active {
+  right: 0;
+  display: flex;
+}
+
+.menu__list {
+  list-style-type: none;
+  display: flex;
+  gap: 3vw;
+  padding-right: 5vw;
+}
+@media (max-width: 768px) {
+  .menu__list {
+    flex-direction: column;
+    gap: 0;
+    margin: auto;
+  }
+}
+
+.menu__link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1vw;
+  font-family: "Golos Text";
+}
+@media (max-width: 768px) {
+  .menu__link {
+    font-size: 3.5vw;
+  }
+}
+
+.menu__icon {
+  display: block;
+  width: 55px;
+  height: 6px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .menu__icon {
+    visibility: hidden;
+  }
+}
+.menu__icon span {
+  position: absolute;
+  top: 1vw;
+  left: 0;
+  width: 4vw;
+  height: 0.3vw;
+  background-color: white;
+  transition: all 0.1s;
+}
+.menu__icon span:first-child {
+  top: 0.3vw;
+}
+.menu__icon span:nth-child(2) {
+  top: 1.3vw;
+}
+.menu__icon span:last-child {
+  top: 2.3vw;
+}
+.menu__icon.active span:first-child {
+  transform: translateY(1vw) rotate(45deg);
+}
+.menu__icon.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu__icon.active span:last-child {
+  transform: translateY(-1vw) rotate(-45deg);
+}
+
+.text {
+  margin-left: 15vw;
+  line-height: 1;
+}
+.text h1 {
+  font-size: 4.5vw;
+  font-family: "Inter";
+  color: white;
+}
+.text p {
+  margin-top: 7vw;
+  color: white;
+  font-family: "Inter";
+  font-size: 1vw;
+  font-weight: 900;
+  position: relative;
+  top: 2vw;
+}
+.text h2 {
+  color: white;
+  font-family: "Golos Text";
+  font-size: 1.2vw;
+  font-weight: 100;
+  position: relative;
+  bottom: 2vw;
+}
+.text .text__btn {
+  border: none;
+  border-radius: 2vw;
+  -webkit-border-radius: 2vw;
+  -moz-border-radius: 2vw;
+  -ms-border-radius: 2vw;
+  -o-border-radius: 2vw;
+  background-color: #25252C;
+  color: white;
+  font-family: "Inter";
+  font-size: 0.7vw;
+  font-weight: 900;
+  padding-top: 1.3vw;
+  padding-bottom: 1.3vw;
+  padding-right: 3.5vw;
+  padding-left: 3.5vw;
+  position: relative;
+  bottom: 9vw;
+}
+.text .text_photos {
+  position: absolute;
+  z-index: 2;
+  width: 1.5vw;
+  height: 1.4vw;
+  margin-left: 1.5vw;
+  margin-top: 1vw;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1E262F;
+  height: 55vw;
+  position: relative;
+}
+.about h1 {
+  font-size: 2.3vw;
+  color: white;
+  font-family: "Inter";
+  font-weight: 500;
+  position: relative;
+  left: 20vw;
+  margin-top: 25vw;
+}
+.about h2 {
+  font-size: 3.5vw;
+  font-weight: 200;
+  font-family: "Oranienbaum";
+  color: white;
+  position: relative;
+  left: 5vw;
+  margin-top: 19vw;
+}
+.about .about-p {
+  font-family: "Inter";
+  font-size: 1vw;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+  width: 27vw;
+  height: 15vw;
+  position: relative;
+  right: 18vw;
+  margin-top: 30vw;
+}
+.about .about__photo {
+  position: absolute;
+  height: 12vw;
+  width: 21vw;
+  right: 0;
+  right: 18vw;
+  margin-top: 17vw;
+}
+
+.inf {
+  display: flex;
+  height: 34vw;
+  margin-left: 15vw;
+  margin-top: 19vw;
+}
+.inf__text h1 {
+  color: #1F252D;
+  font-family: "Inter";
+  font-size: 2vw;
+  font-weight: 900;
+}
+.inf__text p {
+  font-family: "Golos Text";
+  font-size: 1vw;
+  font-weight: 400;
+}
+.inf__photo {
+  position: relative;
+  width: 50vw;
+  height: 29vw;
+  margin-left: 2vw;
+  bottom: 5vw;
+}
+
+.icons {
+  position: relative;
+}
+.icons h1 {
+  font-size: 1.9vw;
+  font-family: "Inter";
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.05vw;
+  padding-bottom: 2vw;
+}
+.icons .icons__photo2 {
+  position: absolute;
+  margin-left: 40vw;
+  bottom: 1vw;
+  width: 50vw;
+  height: 30vw;
+}
+.icons .icons__column {
+  margin-top: 3vw;
+}
+.icons .icons__column .col {
+  display: flex;
+  margin-left: 15vw;
+  margin-top: 1vw;
+}
+.icons .icons__column .col .icons__photo {
+  height: 4.5vw;
+  width: 4.5vw;
+}
+.icons .icons__column .col .icons__text {
+  font-size: 0.9vw;
+  font-family: "Inter";
+  font-weight: 300;
+  padding-left: 1vw;
+  padding-top: 0.2vw;
+}
+
+.project h1 {
+  font-size: 1.9vw;
+  font-family: "Inter";
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.05vw;
+  padding-bottom: 2vw;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.slider-container .block {
+  display: block;
+}
+.slider-container .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vw;
+}
+.slider-container .top .top__controlls {
+  position: absolute;
+  justify-content: center;
+  margin-top: 30vw;
+}
+.slider-container .top .top__controlls img {
+  cursor: pointer;
+  width: 3.5vw;
+  height: 3.5vw;
+}
+.slider-container .top .top__controlls .prev__controlls {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin-right: 1vw;
+}
+.slider-container .top .top__controlls .next__controlls {
+  width: 3.5vw;
+  height: 3.5vw;
+  margin-left: 1vw;
+}
+.slider-container .slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 250vw;
+}
+.slider-container .slider h1 {
+  font-size: 1.5vw;
+  font-family: "Inter";
+  font-weight: 900;
+  color: #1F252D;
+  white-space: nowrap;
+}
+.slider-container .slider p {
+  font-size: 1vw;
+  font-family: "Golos Text";
+  font-weight: 300;
+  color: #1F252D;
+  white-space: nowrap;
+}
+.slider-container .slider h2 {
+  font-size: 1.5vw;
+  font-family: "Inter";
+  font-weight: 900;
+  color: #1F252D;
+  white-space: nowrap;
+}
+.slider-container .slider .slider__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100%;
+  text-align: center;
+  margin-bottom: 4vw;
+  line-height: 5px;
+}
+.slider-container .slider .slider__card .slider__photo {
+  width: 30vw;
+  height: 20vw;
+  margin-bottom: 2vw;
+}
+
+.modal_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.modal_btn .btn {
+  border: none;
+  border-radius: 2vw;
+  -webkit-border-radius: 2vw;
+  -moz-border-radius: 2vw;
+  -ms-border-radius: 2vw;
+  -o-border-radius: 2vw;
+  background-color: #25252C;
+  color: white;
+  font-family: "Inter";
+  font-size: 0.7vw;
+  font-weight: 900;
+  padding-top: 1.3vw;
+  padding-bottom: 1.3vw;
+  padding-right: 3.5vw;
+  padding-left: 3.5vw;
+  position: relative;
+}
+.modal_btn .btn:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+.popup.open {
+  visibility: visible;
+  opacity: 1;
+}
+.popup .modal__box {
+  position: relative;
+  max-width: 50vw;
+  height: 25vw;
+  z-index: 1;
+  padding: 15px;
+  background-color: #1E242C;
+  transition: transform 0.8s;
+}
+.popup .modal__box .modal__close__btn {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  top: 1vw;
+  right: 0;
+}
+.popup .modal__box .modal__close__btn:focus {
+  transition: all 0.5s;
+}
+.popup .modal__box .modal__close__btn:hover {
+  transition: all 0.5s;
+}
+.popup .modal__box .cross__modal__btn {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.popup .modal__box h2 {
+  color: white;
+  font-family: "Inter";
+  font-size: 1.5vw;
+  text-align: center;
+  padding-top: 1vw;
+}
+.popup .modal__box p {
+  font-family: "Inter";
+  font-size: 1vw;
+  color: white;
+  margin-left: 3vw;
+}
+.popup .modal__box #number {
+  border: none;
+  border-radius: 0.5vw;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+  padding: 0.3vw;
+  padding-right: 5vw;
+  margin-bottom: 1vw;
+  margin-left: 3vw;
+  width: 6vw;
+}
+.popup .modal__box #name {
+  border: none;
+  border-radius: 0.5vw;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+  padding: 0.3vw;
+  padding-right: 5vw;
+  margin-bottom: 1vw;
+  margin-left: 3vw;
+  width: 6vw;
+}
+.popup .modal__box .modal__checkbox {
+  margin-left: 3vw;
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-family: "Inter";
+  font-weight: 200;
+  color: white;
+  height: 0.6vw;
+  width: 0.6vw;
+}
+.popup .modal__box .label__checkbox {
+  font-size: 0.6vw;
+  font-family: "Inter";
+  font-weight: 200;
+  color: white;
+}
+.popup .modal__box .submit__btn__modal {
+  border: none;
+  border-radius: 2vw;
+  -webkit-border-radius: 2vw;
+  -moz-border-radius: 2vw;
+  -ms-border-radius: 2vw;
+  -o-border-radius: 2vw;
+  background-color: #ffffff;
+  color: #1E242C;
+  font-family: "Inter";
+  font-size: 0.7vw;
+  font-weight: 900;
+  padding-top: 0.7vw;
+  padding-bottom: 0.7vw;
+  padding-right: 3.5vw;
+  padding-left: 3.5vw;
+  position: relative;
+  margin-left: 3vw;
+  height: 2.3vw;
+}
+
+.tabs .tabs__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
+}
+.tabs .tabs__nav .icon__tabs {
+  margin-right: 1vw;
+  text-align: center;
+  color: #020202;
+  font-family: "Inter";
+}
+.tabs .tabs__nav .icon__tabs p {
+  margin-left: 1vw;
+  font-size: 0.6vw;
+  font-weight: 300;
+}
+.tabs .tabs__nav .icon__tabs .tabs__nav-btn {
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 4rem;
+  border: #807f7f;
+}
+.tabs .tabs__nav .icon__tabs .tabs__nav-btn:nth-child(1) {
+  margin-left: 1vw;
+}
+.tabs .tabs__nav .icon__tabs .tabs__nav-btn .tab__photos {
+  height: 1.5vw;
+  width: 1.5vw;
+}
+.tabs .tabs__nav .icon__tabs .tabs__nav-btn:hover {
+  background-color: #25252C;
+}
+.tabs .tabs__nav .icon__tabs .tabs__nav-btn.active {
+  background-color: #25252C;
+  border-right-color: #25252C;
+  color: #fff;
+}
+.tabs .tabs__item {
+  margin-top: 4vw;
+  display: none;
+}
+.tabs .tabs__item .tabs__photos {
+  width: 27vw;
+  height: 19vw;
+  margin-left: 5vw;
+}
+.tabs .tabs__item .tabs__text {
+  margin-left: 20vw;
+}
+.tabs .tabs__item h1 {
+  font-family: "Oranienbaum";
+  font-size: 3vw;
+  font-weight: 500;
+}
+.tabs .tabs__item h2 {
+  font-family: "Inter";
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+.tabs .tabs__item p {
+  font-family: "Inter";
+  font-size: 0.8vw;
+  font-weight: 400;
+}
+.tabs .tabs__item.active {
+  display: flex;
+}
+
+.construction {
+  position: relative;
+}
+.construction .construction__flex {
+  display: flex;
+  position: relative;
+  gap: 10vw;
+  margin-left: 28vw;
+  top: 6vw;
+}
+.construction .construction__flex .construction__text1 h2 {
+  font-size: 1vw;
+  font-family: "Inter";
+  font-weight: 500;
+}
+.construction .construction__flex .construction__text2 h2 {
+  font-size: 1vw;
+  font-family: "Inter";
+  font-weight: 500;
+}
+.construction .construction__flex1 {
+  display: flex;
+  position: relative;
+  gap: 10vw;
+  margin-left: 28vw;
+  top: 1vw;
+}
+.construction .construction__flex1 .construction__text1 h2 {
+  font-size: 1vw;
+  font-family: "Inter";
+  font-weight: 500;
+}
+.construction .construction__flex1 .construction__text2 h2 {
+  font-size: 1vw;
+  font-family: "Inter";
+  font-weight: 500;
+}
+.construction h1 {
+  font-size: 1.9vw;
+  font-family: "Inter";
+  font-weight: 900;
+  color: #1F252D;
+  white-space: nowrap;
+  text-align: center;
+}
+.construction .grid__photo {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
+}
+.construction .grid__photo .construction__photo {
+  height: 30vw;
+}
+.construction .grid2__photo {
+  position: relative;
+}
+.construction .grid2__photo .right__photo1 {
+  height: 5vw;
+  width: 8vw;
+  position: absolute;
+  bottom: 28vw;
+  left: 35vw;
+}
+.construction .grid2__photo .right__photo2 {
+  height: 5vw;
+  width: 8vw;
+  position: absolute;
+  bottom: 28vw;
+  left: 55vw;
+}
+.construction .grid2__photo .right__photo3 {
+  height: 8vw;
+  width: 6vw;
+  position: absolute;
+  top: -3vw;
+  left: 39vw;
+}
+.construction .grid2__photo .right__photo4 {
+  height: 8vw;
+  width: 6vw;
+  position: absolute;
+  top: -3vw;
+  left: 25vw;
+}
+
+.h1__text h1 {
+  font-size: 1.9vw;
+  font-family: "Inter";
+  font-weight: 900;
+  color: #1F252D;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 9vw;
+}
+
+.filter {
+  margin-top: 5vw;
+  background-color: #1E242C;
+  display: flex;
+}
+.filter h2 {
+  font-family: "Inter";
+  font-size: 1vw;
+  margin-left: 1vw;
+}
+.filter h3 {
+  font-family: "Inter";
+  font-size: 0.9vw;
+  margin-left: 1vw;
+}
+.filter p {
+  font-family: "Inter";
+  font-size: 0.7vw;
+  margin-left: 1vw;
+}
+.filter .filter__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 15vw);
+  gap: 2vw;
+  padding: 0.5vw;
+}
+.filter .filter__grid div {
+  display: none;
+}
+.filter .filter__grid div.filter__floor1 {
+  display: block;
+}
+.filter .filter__grid div.filter__floor2 {
+  display: block;
+}
+.filter .filter__grid div.filter__floor3 {
+  display: block;
+}
+.filter .filter__grid .filter__photo {
+  width: 15vw;
+  height: 12vw;
+}
+.filter .filter__grid .filter__floor1 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 15vw;
+  height: 22vw;
+  margin-left: 1vw;
+}
+.filter .filter__grid .filter__floor2 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 15vw;
+  height: 22vw;
+  margin-left: 1vw;
+}
+.filter .filter__grid .filter__floor3 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 15vw;
+  height: 22vw;
+  margin-left: 1vw;
+}
+.filter .selector {
+  color: white;
+  font-size: 2.4vw;
+  font-family: "Inter";
+  font-weight: 500;
+  margin-left: 4.5vw;
+}
+.filter .selector .selector__floor {
+  display: flex;
+  gap: 3.8vw;
+}
+.filter .selector .selector__floor a {
+  font-family: "Inter";
+  font-size: 1.2vw;
+  color: white;
+}
+.filter .selector .selector__floor .selector__btn {
+  border-radius: 4rem;
+  width: 2.3vw;
+  height: 2.3vw;
+  border: #807f7f;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+.filter .selector .selector__floor .selector__btn:hover {
+  background-color: #54A3FF;
+}
+.filter .selector .selector__floor .selector__btn.active {
+  background-color: #54A3FF;
+  border-right-color: #54A3FF;
+  color: #fff;
+}
+
+.footer {
+  background-color: #1E242C;
+  display: flex;
+}
+.footer .accordion {
+  margin-left: 4vw;
+}
+.footer .accordion .accordion__item .accordion__body {
+  display: none;
+}
+.footer .accordion .accordion__item.accordion__item_show .accordion__body {
+  display: block;
+}
+.footer .accordion .accordion__header {
+  display: flex;
+}
+.footer .accordion .accordion__header .accordion__arrow {
+  width: 0.5vw;
+  height: 0.5vw;
+  position: relative;
+  margin-top: 1.3vw;
+  margin-left: 0.5vw;
+  transition: transform 0.3s ease;
+}
+.footer .accordion .accordion__header .accordion__arrow_rotate {
+  transform: rotate(180deg);
+}
+.footer .accordion .accordion__header h1 {
+  color: white;
+  font-size: 1.1vw;
+  font-family: "Inter";
+  font-weight: 900;
+}
+.footer .accordion .accordion__body p {
+  color: white;
+  font-size: 0.8vw;
+  font-family: "Golos";
+  font-weight: 300;
+}
+.footer .footer__inf {
+  display: flex;
+  gap: 7vw;
+  margin-left: 15vw;
+}
+.footer .footer__inf .quest {
+  font-size: 0.6vw;
+  font-family: "Inter";
+  font-weight: 900;
+  color: white;
+}
+.footer .footer__inf .footer__icons .footer__icons__photo {
+  height: 2vw;
+  width: 2vw;
+  margin-left: 2.5vw;
+}
+.footer .footer__inf .footer__numbers {
+  font-size: 0.9vw;
+  font-family: "Golos";
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer .footer__inf .footer__logo h1 {
+  font-size: 1.2vw;
+  font-family: "Inter";
+  color: white;
+  font-weight: 900;
+}
+
+@media (max-width: 400px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 3vw;
+  }
+  .header .navbar__logo {
+    padding-left: 5vw;
+  }
+}
+@media (max-width: 400px) and (max-width: 768px) {
+  .menu__body {
+    position: absolute;
+    height: 55vw;
+    width: 50vw;
+    top: 0vw;
+    background-color: #25252C;
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .menu__body.active {
+    right: 0;
+    display: flex;
+  }
+  .menu__list {
+    list-style-type: none;
+    display: flex;
+    gap: 3vw;
+    padding-right: 5vw;
+  }
+}
+@media (max-width: 400px) and (max-width: 768px) {
+  .menu__list {
+    flex-direction: column;
+    gap: 0;
+    margin: auto;
+  }
+}
+@media (max-width: 400px) {
+  .menu__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-family: "Golos Text";
+  }
+}
+@media (max-width: 400px) and (max-width: 768px) {
+  .menu__link {
+    font-size: 3.5vw;
+  }
+}
+@media (max-width: 400px) {
+  .menu__icon {
+    display: block;
+    width: 55px;
+    height: 6px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+}
+@media (max-width: 400px) and (min-width: 768px) {
+  .menu__icon {
+    visibility: hidden;
+  }
+}
+@media (max-width: 400px) {
+  .menu__icon span {
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    width: 8vw;
+    height: 0.3vw;
+    background-color: white;
+    transition: all 0.1s;
+  }
+  .menu__icon span:first-child {
+    top: 0.3vw;
+  }
+  .menu__icon span:nth-child(2) {
+    top: 1.3vw;
+  }
+  .menu__icon span:last-child {
+    top: 2.5vw;
+  }
+  .text {
+    margin-left: 15vw;
+    line-height: 1;
+  }
+  .text h1 {
+    font-size: 10vw;
+    font-family: "Inter";
+    color: white;
+  }
+  .text p {
+    display: block;
+    margin-top: 5vw;
+    color: white;
+    font-family: "Inter";
+    font-size: 2vw;
+    font-weight: 900;
+    position: relative;
+    top: 5vw;
+  }
+  .text h2 {
+    display: none;
+    color: white;
+    font-family: "Golos Text";
+    font-size: 2vw;
+    font-weight: 100;
+    position: relative;
+    bottom: 2vw;
+  }
+  .text .text__btn {
+    border: none;
+    border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    -ms-border-radius: 3vw;
+    -o-border-radius: 3vw;
+    background-color: #25252C;
+    color: white;
+    font-family: "Inter";
+    font-size: 1.7vw;
+    font-weight: 900;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-right: 10vw;
+    padding-left: 9vw;
+    position: relative;
+    bottom: 9vw;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 3vw;
+  }
+  .header .navbar__logo {
+    padding-left: 5vw;
+    width: 15vw;
+  }
+  .about {
+    background-color: #1E262F;
+    height: 55vw;
+  }
+  .about h1 {
+    font-size: 9vw;
+    color: white;
+    font-family: "Inter";
+    font-weight: 500;
+    position: relative;
+    left: 20vw;
+    bottom: 25vw;
+  }
+  .about h2 {
+    display: none;
+    font-size: 5vw;
+    font-weight: 200;
+    font-family: "Oranienbaum";
+    color: white;
+    position: relative;
+    margin-top: 10vw;
+    margin-right: 18vw;
+  }
+  .about .about-p {
+    font-family: "Inter";
+    font-size: 1.5vw;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    width: 42vw;
+    height: 10vw;
+    position: relative;
+    right: 28vw;
+    margin-top: 29vw;
+  }
+  .about .about__photo {
+    position: absolute;
+    height: 25vw;
+    width: 55vw;
+    right: 21vw;
+    margin-top: 12vw;
+  }
+  .inf {
+    display: flex;
+    height: 34vw;
+    bottom: 10vw;
+    position: relative;
+  }
+  .inf__text h1 {
+    position: relative;
+    color: #1F252D;
+    font-family: "Inter";
+    font-size: 10vw;
+    flex-wrap: nowrap;
+    font-weight: 900;
+    bottom: 17vw;
+    margin-left: 11vw;
+    text-align: center;
+  }
+  .inf__text p {
+    display: none;
+    font-family: "Golos Text";
+    font-size: 1vw;
+    font-weight: 400;
+  }
+  .inf__photo {
+    position: absolute;
+    width: 80vw;
+    height: 33vw;
+    right: 10vw;
+    top: 15vw;
+  }
+  .icons {
+    position: relative;
+  }
+  .icons h1 {
+    justify-content: center;
+    font-size: 7vw;
+    font-family: "Inter";
+    font-weight: 900;
+    width: 60vw;
+    text-align: center;
+    letter-spacing: 0.05vw;
+    padding-bottom: 2vw;
+    margin-left: 15vw;
+  }
+  .icons .icons__photo2 {
+    display: none;
+    position: absolute;
+    margin-left: 40vw;
+    bottom: 1vw;
+    width: 50vw;
+    height: 30vw;
+  }
+  .icons .icons__column {
+    margin-top: 3vw;
+    margin-left: 10vw;
+  }
+  .icons .icons__column .col {
+    margin-left: 15vw;
+    margin-top: 5vw;
+  }
+  .icons .icons__column .col .icons__photo {
+    height: 10w;
+    width: 7vw;
+    position: relative;
+    right: 8vw;
+  }
+  .icons .icons__column .col .icons__text {
+    position: relative;
+    font-size: 3vw;
+    font-family: "Inter";
+    font-weight: 500;
+    padding-left: 1vw;
+    bottom: 3vw;
+    right: 7vw;
+  }
+  .project h1 {
+    font-size: 9vw;
+    font-family: "Inter";
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.05vw;
+    padding-bottom: 2vw;
+  }
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10;
+  }
+  .slider-container .block {
+    display: block;
+  }
+  .slider-container .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vw;
+  }
+  .slider-container .top .top__controlls {
+    position: absolute;
+    justify-content: center;
+    margin-top: 35vw;
+  }
+  .slider-container .top .top__controlls img {
+    cursor: pointer;
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .slider-container .top .top__controlls .prev__controlls {
+    width: 9vw;
+    height: 9vw;
+    margin-right: 30vw;
+    margin-bottom: 4vw;
+  }
+  .slider-container .top .top__controlls .next__controlls {
+    width: 9vw;
+    height: 9vw;
+    margin-left: 1vw;
+    margin-bottom: 4vw;
+  }
+  .slider-container .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 250vw;
+  }
+  .slider-container .slider h1 {
+    font-size: 3vw;
+    font-family: "Inter";
+    font-weight: 900;
+    color: #1F252D;
+    white-space: nowrap;
+  }
+  .slider-container .slider p {
+    font-size: 1.5vw;
+    font-family: "Golos Text";
+    font-weight: 300;
+    color: #1F252D;
+    white-space: nowrap;
+  }
+  .slider-container .slider h2 {
+    font-size: 1.5vw;
+    font-family: "Inter";
+    font-weight: 900;
+    color: #1F252D;
+    white-space: nowrap;
+  }
+  .slider-container .slider .slider__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 5vw;
+    line-height: 1px;
+  }
+  .slider-container .slider .slider__card .slider__photo {
+    width: 55vw;
+    height: 45vw;
+    margin-bottom: 2vw;
+  }
+  .modal_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+  }
+  .modal_btn .btn {
+    border: none;
+    border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    -ms-border-radius: 3vw;
+    -o-border-radius: 3vw;
+    background-color: #25252C;
+    color: white;
+    font-family: "Inter";
+    font-size: 5vw;
+    font-weight: 900;
+    padding-top: 1.9vw;
+    padding-bottom: 1.9vw;
+    padding-right: 13vw;
+    padding-left: 13vw;
+    position: relative;
+  }
+  .modal_btn .btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+  .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+  }
+  .popup.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup .modal__box {
+    position: relative;
+    max-width: 50vw;
+    height: 50vw;
+    z-index: 1;
+    padding: 30px;
+    background-color: #1E242C;
+    transition: transform 0.8s;
+  }
+  .popup .modal__box .modal__close__btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 1vw;
+    right: 0;
+  }
+  .popup .modal__box .modal__close__btn:focus {
+    transition: all 0.5s;
+  }
+  .popup .modal__box .modal__close__btn:hover {
+    transition: all 0.5s;
+  }
+  .popup .modal__box .cross__modal__btn {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+  .popup .modal__box h2 {
+    color: white;
+    font-family: "Inter";
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 1vw;
+  }
+  .popup .modal__box p {
+    font-family: "Inter";
+    font-size: 3vw;
+    color: white;
+    margin-left: 3vw;
+  }
+  .popup .modal__box #number {
+    border: none;
+    border-radius: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    -ms-border-radius: 0.5vw;
+    -o-border-radius: 0.5vw;
+    padding: 0.3vw;
+    padding-right: 10vw;
+    margin-bottom: 1vw;
+    margin-left: 3vw;
+    width: 20vw;
+  }
+  .popup .modal__box #name {
+    border: none;
+    border-radius: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    -ms-border-radius: 0.5vw;
+    -o-border-radius: 0.5vw;
+    padding: 0.3vw;
+    padding-right: 10vw;
+    margin-bottom: 1vw;
+    margin-left: 3vw;
+    width: 20vw;
+  }
+  .popup .modal__box .modal__checkbox {
+    margin-left: 3vw;
+    margin-bottom: 1vw;
+    font-size: 5vw;
+    font-family: "Inter";
+    font-weight: 200;
+    color: white;
+    height: 3vw;
+    width: 3vw;
+  }
+  .popup .modal__box .label__checkbox {
+    font-size: 1.8vw;
+    font-family: "Inter";
+    font-weight: 200;
+    color: white;
+  }
+  .popup .modal__box .submit__btn__modal {
+    border: none;
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+    -moz-border-radius: 2vw;
+    -ms-border-radius: 2vw;
+    -o-border-radius: 2vw;
+    background-color: #ffffff;
+    color: #1E242C;
+    font-family: "Inter";
+    font-size: 2vw;
+    font-weight: 900;
+    padding-top: 2.5vw;
+    padding-bottom: 4.5vw;
+    padding-right: 4.5vw;
+    padding-left: 4.5vw;
+    position: relative;
+    margin-left: 3vw;
+    height: 2.3vw;
+  }
+  .tabs .tabs__nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+  }
+  .tabs .tabs__nav .icon__tabs {
+    margin-right: 1vw;
+    text-align: center;
+    color: #020202;
+    font-family: "Inter";
+  }
+  .tabs .tabs__nav .icon__tabs p {
+    margin-left: 1vw;
+    font-size: 7vw;
+    font-weight: 300;
+  }
+  .tabs .tabs__nav .icon__tabs .tabs__nav-btn {
+    width: 17vw;
+    height: 17vw;
+    border-radius: 4rem;
+    border: #807f7f;
+  }
+  .tabs .tabs__nav .icon__tabs .tabs__nav-btn:nth-child(1) {
+    margin-left: 1vw;
+  }
+  .tabs .tabs__nav .icon__tabs .tabs__nav-btn .tab__photos {
+    height: 8vw;
+    width: 8vw;
+  }
+  .tabs .tabs__nav .icon__tabs .tabs__nav-btn:hover {
+    background-color: #25252C;
+  }
+  .tabs .tabs__nav .icon__tabs .tabs__nav-btn.active {
+    background-color: #25252C;
+    border-right-color: #25252C;
+    color: #fff;
+  }
+  .tabs .tabs__item {
+    margin-top: 4vw;
+    display: none;
+  }
+  .tabs .tabs__item .tabs__photos {
+    width: 85vw;
+    height: 55vw;
+    margin-left: 5vw;
+  }
+  .tabs .tabs__item .tabs__text {
+    margin-left: 20vw;
+  }
+  .tabs .tabs__item h1 {
+    font-family: "Oranienbaum";
+    font-size: 10vw;
+    font-weight: 500;
+    margin-right: 10vw;
+  }
+  .tabs .tabs__item h2 {
+    font-family: "Inter";
+    font-size: 4vw;
+    font-weight: 400;
+    margin-right: 10vw;
+  }
+  .tabs .tabs__item p {
+    display: none;
+    font-family: "Inter";
+    font-size: 3vw;
+    font-weight: 400;
+    margin-right: 10vw;
+  }
+  .tabs .tabs__item.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .construction {
+    position: relative;
+  }
+  .construction .construction__flex {
+    display: flex;
+    position: relative;
+    gap: 10vw;
+    margin-left: 28vw;
+    top: 6vw;
+  }
+  .construction .construction__flex .construction__text1 h2 {
+    font-size: 2.5vw;
+    font-family: "Inter";
+    font-weight: 500;
+  }
+  .construction .construction__flex .construction__text2 h2 {
+    font-size: 2.5vw;
+    font-family: "Inter";
+    font-weight: 500;
+  }
+  .construction .construction__flex1 {
+    display: flex;
+    position: relative;
+    gap: 10vw;
+    margin-left: 28vw;
+    top: 1vw;
+  }
+  .construction .construction__flex1 .construction__text1 h2 {
+    font-size: 2.5vw;
+    font-family: "Inter";
+    font-weight: 500;
+  }
+  .construction .construction__flex1 .construction__text2 h2 {
+    font-size: 2.5vw;
+    font-family: "Inter";
+    font-weight: 500;
+  }
+  .construction h1 {
+    font-size: 9vw;
+    font-family: "Inter";
+    font-weight: 900;
+    color: #1F252D;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .construction .grid__photo {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+  }
+  .construction .grid__photo .construction__photo {
+    height: 45vw;
+  }
+  .construction .grid2__photo {
+    position: relative;
+  }
+  .construction .grid2__photo .right__photo1 {
+    height: 19vw;
+    width: 22vw;
+    position: absolute;
+    bottom: 39vw;
+    left: 10vw;
+  }
+  .construction .grid2__photo .right__photo2 {
+    height: 19vw;
+    width: 22vw;
+    position: absolute;
+    bottom: 39vw;
+    left: 55vw;
+  }
+  .construction .grid2__photo .right__photo3 {
+    height: 15vw;
+    width: 17vw;
+    position: absolute;
+    top: -3vw;
+    left: 39vw;
+  }
+  .construction .grid2__photo .right__photo4 {
+    height: 15vw;
+    width: 22vw;
+    position: absolute;
+    top: -3vw;
+    left: 18vw;
+  }
+  .h1__text h1 {
+    font-size: 9vw;
+    font-family: "Inter";
+    font-weight: 900;
+    color: #1F252D;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 9vw;
+  }
+  .filter {
+    margin-top: 5vw;
+    background-color: #1E242C;
+  }
+  .filter h2 {
+    font-family: "Inter";
+    font-size: 2vw;
+    margin-left: 1vw;
+  }
+  .filter h3 {
+    font-family: "Inter";
+    font-size: 2vw;
+    margin-left: 1vw;
+  }
+  .filter p {
+    font-family: "Inter";
+    font-size: 1.5vw;
+    margin-left: 1vw;
+  }
+  .filter .filter__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 31vw);
+    gap: 0.5vw;
+    padding: 0.1vw;
+    padding-right: 0.1vw;
+  }
+  .filter .filter__grid div {
+    display: none;
+  }
+  .filter .filter__grid div.filter__floor1 {
+    display: block;
+  }
+  .filter .filter__grid div.filter__floor2 {
+    display: block;
+  }
+  .filter .filter__grid div.filter__floor3 {
+    display: block;
+  }
+  .filter .filter__grid .filter__photo {
+    width: 31vw;
+    height: 24vw;
+  }
+  .filter .filter__grid .filter__floor1 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 31vw;
+    height: 37vw;
+    margin-left: 1vw;
+  }
+  .filter .filter__grid .filter__floor2 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 31vw;
+    height: 37vw;
+    margin-left: 1vw;
+  }
+  .filter .filter__grid .filter__floor3 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 31vw;
+    height: 37vw;
+    margin-left: 1vw;
+  }
+  .filter .selector {
+    position: relative;
+    color: white;
+    font-size: 5vw;
+    font-family: "Inter";
+    font-weight: 500;
+    right: 25vw;
+  }
+  .filter .selector h4 {
+    display: none;
+  }
+  .filter .selector .selector__floor {
+    position: relative;
+    margin-top: 90vw;
+    right: 51vw;
+    gap: 1vw;
+  }
+  .filter .selector .selector__floor a {
+    font-family: "Inter";
+    font-size: 9vw;
+    color: white;
+  }
+  .filter .selector .selector__floor .selector__btn {
+    border-radius: 5rem;
+    width: 12vw;
+    height: 12vw;
+    border: #807f7f;
+    background-color: #D9D9D9;
+    cursor: pointer;
+  }
+  .filter .selector .selector__floor .selector__btn:hover {
+    background-color: #54A3FF;
+  }
+  .filter .selector .selector__floor .selector__btn.active {
+    background-color: #54A3FF;
+    border-right-color: #54A3FF;
+    color: #fff;
+  }
+  .footer {
+    background-color: #1E242C;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .accordion {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vw;
+    margin-top: 10vw;
+  }
+  .footer .accordion .accordion__item .accordion__body {
+    display: none;
+  }
+  .footer .accordion .accordion__item.accordion__item_show .accordion__body {
+    display: block;
+  }
+  .footer .accordion .accordion__header {
+    display: flex;
+  }
+  .footer .accordion .accordion__header .accordion__arrow {
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    margin-top: 7vw;
+    margin-left: 1vw;
+    transition: transform 0.3s ease;
+  }
+  .footer .accordion .accordion__header .accordion__arrow_rotate {
+    transform: rotate(180deg);
+  }
+  .footer .accordion .accordion__header h1 {
+    color: white;
+    font-size: 7vw;
+    font-family: "Inter";
+    font-weight: 900;
+  }
+  .footer .accordion .accordion__body p {
+    color: white;
+    font-size: 4vw;
+    font-family: "Golos";
+    font-weight: 300;
+  }
+  .footer .footer__inf {
+    display: flex;
+    gap: 7vw;
+    margin-left: 15vw;
+  }
+  .footer .footer__inf .quest {
+    font-size: 5vw;
+    font-family: "Inter";
+    font-weight: 900;
+    position: relative;
+    color: white;
+    margin-left: 10vw;
+    width: 48vw;
+  }
+  .footer .footer__inf .footer__icons {
+    display: none;
+  }
+  .footer .footer__inf .footer__icons .footer__icons__photo {
+    height: 2vw;
+    width: 2vw;
+    margin-left: 2.5vw;
+  }
+  .footer .footer__inf .footer__numbers {
+    display: none;
+    font-size: 2vw;
+    font-family: "Golos";
+    width: 35vw;
+    position: relative;
+    right: 5vw;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    bottom: 20vw;
+  }
+  .footer .footer__inf .footer__logo {
+    display: none;
+  }
+  .footer .footer__inf .footer__logo h1 {
+    position: relative;
+    font-size: 8.5vw;
+    font-family: "Inter";
+    color: white;
+    font-weight: 900;
+    bottom: 65vw;
+    right: 39vw;
+  }
+}/*# sourceMappingURL=main.css.map */
